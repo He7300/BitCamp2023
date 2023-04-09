@@ -25,18 +25,26 @@
 		}
 
 		label {
-			display: block;
-			font-size: 16px;
-			font-weight: bold;
-			margin-top: 20px;
+  			display: inline-block;
+  			vertical-align: middle;
 		}
 
-		input[type="text"], input[type="checkbox"] {
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			font-family: 'Lato', Courier, monospace;
+		}
+		input[type="text"] {
 			border: 1px solid #ccc;
 			border-radius: 5px;
 			font-size: 16px;
 			padding: 10px;
-			width: 100%;
+			width: 95%;
 		}
 
 		input[type="submit"] {
@@ -50,13 +58,20 @@
 			padding: 10px;
 			width: 100%;
 		}
+		input[type="checkbox"] {
+			padding: 10px;
 
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+			}
 		input[type="submit"]:hover {
 			background-color: #555;
 		}
+		
 	</style>
 </head>
-<body>
+<body class = "container">
 	<h1>Register</h1>
 	<form method="POST" action="/register">
 		<label for="recipient-country-name">Recipient Country Name:</label>
