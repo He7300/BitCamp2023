@@ -3,13 +3,6 @@ from flask import Flask, render_template, request, send_file
 api = 'http://127.0.0.1:8000'
 
 app = Flask(__name__)
-@app.route('/download/style.css')
-def download_style():
-    return send_file('static/css/style.css', as_attachment=True)
-
-@app.route('/download/js.js')
-def download_javascript():
-    return send_file('static/js/script.js', as_attachment=True)
 
 @app.route('/')
 def index():
@@ -42,19 +35,13 @@ def forgot_GET():
 def forgot_POST():
     pass
 
+@app.route('/signup/')
+def signup_GET():
+    return render_template('signup.html')
+
 @app.route('/myprofile/')
 def profile():
     return render_template('register.html')
-
-@app.route('/submit_appointment', methods=['POST'])
-def submit_appointment():
-    number = request.form['number']
-    purpose = request.form['purpose']
-    appointment_type = request.form['appointment-type']
-    name = request.form['name']
-    date = request.form['date']
-    convenience = request.form['convenience']
-    return f"Appointment submitted for {name} on {date} at {convenience} convenience. We will contact you at {number} regarding your {appointment_type} appointment to schedule a {purpose}."
 
 if __name__ == '__main__':
     app.run(debug=True)
