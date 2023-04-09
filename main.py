@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, send_file
 
-app = Flask(__name__)
+api = 'http://127.0.0.1:8000'
 
+app = Flask(__name__)
 @app.route('/download/style.css')
 def download_style():
     return send_file('static/css/style.css', as_attachment=True)
