@@ -5,7 +5,7 @@ import uvicorn
 app = FastAPI()
 
 # Connect to the database
-conn = psycopg2.connect(r"postgresql://ronald:wZ6PuHWFiPFloIyAC-73ng@brass-pelican-10160.7tt.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&sslrootcert=C:\Users\He\Downloads\hoohack2023-main\BitCamp2023\root.crt")
+conn = psycopg2.connect(r"postgresql://ronald:wZ6PuHWFiPFloIyAC-73ng@brass-pelican-10160.7tt.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&sslrootcert=/Users/ron/Documents/cluster/BitCamp2023/root.crt")
 
 # Create a cursor object
 cur = conn.cursor()
