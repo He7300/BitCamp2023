@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+
+		h1 {
+			color: #333;
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		form {
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			margin: 50px auto;
+			max-width: 600px;
+			padding: 20px;
+		}
+
+		label {
+			display: block;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+
+		input[type="text"], input[type="checkbox"] {
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		input[type="submit"] {
+			background-color: #333;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+<body>
+	<h1>Register</h1>
+	<form method="POST" action="/register">
+		<label for="recipient-country-name">Recipient Country Name:</label>
+		<input type="text" id="recipient-country-name" name="recipient_country_name" required>
+
+		<label for="recipient-city-name">Recipient City Name:</label>
+		<input type="text" id="recipient-city-name" name="recipient_city_name" required>
+
+		<label for="recipient-state-code">Recipient State Code:</label>
+		<input type="text" id="recipient-state-code" name="recipient_state_code" required>
+
+		<label for="recipient-zip-4-code">Recipient ZIP 4 Code:</label>
+		<input type="text" id="recipient-zip-4-code" name="recipient_zip_4_code" required>
+
+		<label for="product-or-service-code-description">Product or Service Code Description:</label>
+		<input type="text" id="product-or-service-code-description" name="product_or_service_code_description" required>
+
+		<label for="naics-code">NAICS Code:</label>
+		<input type="text" id="naics-code" name="naics_code" required>
+
+		<label for="naics-description">NAICS Description:</label>
+		<input type="text" id="naics-description" name="naics_description" required>
+
+		<label for="multi-year-contract">Multi-Year Contract:</label>
+		<input type="checkbox" id="multi-year-contract" name="multi_year_contract">
+
+		<label for="alaskan-native-corporation-owned-firm">Alaskan Native Corporation Owned Firm:</label>
+		<input type="checkbox" id="alaskan-native-corporation-owned-firm" name="alaskan_native_corporation_owned_firm">
+
+		<label for="native-hawaiian-organization-owned-firm">Native Hawaiian Organization OwnedFirm:</label>
+<input type="checkbox" id="native-hawaiian-organization-owned-firm" name="native_hawaiian_organization_owned_firm">
+        	<label for="veteran-owned-business">Veteran Owned Business:</label>
+	<input type="checkbox" id="veteran-owned-business" name="veteran_owned_business">
+
+	<label for="service-disabled-veteran-owned-business">Service Disabled Veteran Owned Business:</label>
+	<input type="checkbox" id="service-disabled-veteran-owned-business" name="service_disabled_veteran_owned_business">
+
+	<label for="woman-owned-business">Woman Owned Business:</label>
+	<input type="checkbox" id="woman-owned-business" name="woman_owned_business">
+
+	<label for="women-owned-small-business">Women Owned Small Business:</label>
+	<input type="checkbox" id="women-owned-small-business" name="women_owned_small_business">
+
+	<label for="minority-owned-business">Minority Owned Business:</label>
+	<input type="checkbox" id="minority-owned-business" name="minority_owned_business">
+
+	<label for="asian-pacific-american-owned-business">Asian Pacific American Owned Business:</label>
+	<input type="checkbox" id="asian-pacific-american-owned-business" name="asian_pacific_american_owned_business">
+
+	<label for="black-american-owned-business">Black American Owned Business:</label>
+	<input type="checkbox" id="black-american-owned-business" name="black_american_owned_business">
+
+	<label for="hispanic-american-owned-business">Hispanic American Owned Business:</label>
+	<input type="checkbox" id="hispanic-american-owned-business" name="hispanic_american_owned_business">
+
+	<label for="native-american-owned-business">Native American Owned Business:</label>
+	<input type="checkbox" id="native-american-owned-business" name="native_american_owned_business">
+
+	<label for="other-minority-owned-business">Other Minority Owned Business:</label>
+	<input type="checkbox" id="other-minority-owned-business" name="other_minority_owned_business">
+
+	<label for="small-disadvantaged-business">Small Disadvantaged Business:</label>
+	<input type="checkbox" id="small-disadvantaged-business" name="small_disadvantaged_business">
+
+	<label for="c8a-program-participant">C8A Program Participant:</label>
+	<input type="checkbox" id="c8a-program-participant" name="c8a_program_participant">
+
+	<label for="historically-underutilized-business-zone-hubzone-firm">Historically Underutilized Business Zone (HUBZone) Firm:</label>
+	<input type="checkbox" id="historically-underutilized-business-zone-hubzone-firm" name="historically_underutilized_business_zone_hubzone_firm">
+
+	<label for="organizational-type">Organizational Type:</label>
+	<select id="organizational-type" name="organizational_type">
+		<option value="corporate-entity-not-tax-exempt">Corporate Entity Not Tax Exempt</option>
+		<option value="corporate-entity-tax-exempt">Corporate Entity Tax Exempt</option>
+		<option value="partnership-or-limited-liability-partnership">Partnership or Limited Liability Partnership</option>
+		<option value="sole-proprietorship">Sole Proprietorship</option>
+		<option value="international-organization">International Organization</option>
+		<option value="limited-liability-corporation">Limited Liability Corporation</option>
+	</select>
+	<input type="submit" value="Register">
+</form>
+
+</body>
+</html>
