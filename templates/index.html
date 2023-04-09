@@ -3,15 +3,24 @@
 <head>
 	<title>Landing Page</title>
 	<style>
-		body {
-			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
-			margin: 0;
-		}
+        body {
+          background-color: #000000;
+        }
+
+        .stripe-pattern {
+          background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px);
+        }
+        .section {
+          background-color: #5E548E !important;
+        }
+
 		.container {
 			max-width: 1200px;
 			margin: 0 auto;
 			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 		header {
 			display: flex;
@@ -53,91 +62,140 @@
 			align-items: center;
 			justify-content: center;
 			height: 500px;
-			background-image: url('https://images.unsplash.com/photo-1541549126-5e6dd5d6c013');
+			background-image: url('Images/purple_light.png');
+            {#background-color: hsl(270, 40%, 50%);#}
 			background-size: cover;
 			background-position: center;
 			position: relative;
 		}
 		.hero:before {
-			content: "";
+			content: "kdsajfajflk";
 			display: block;
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0,0,0,0.5);
+            {#background-color: hsl(270, 40%, 50%);#}
 		}
-		.hero h1 {
-			color: #fff;
-			font-size: 48px;
-			text-align: center;
-			text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
-			margin-bottom: 0;
-			text-transform: uppercase;
-		}
-		.features {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-			margin: 50px 0;
-		}
-		.feature {
-			background-color: #fff;
-			padding: 20px;
-			margin: 20px;
-			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-			border-radius: 5px;
-			width: 300px;
-			text-align: center;
-			transition: all 0.3s ease-in-out;
-		}
+.hero h1 {
+    color: #000000;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; /* add a custom font */
+    letter-spacing: 2px; /* increase the letter spacing */
+    line-height: 1.2; /* adjust the line height */
+}
+
+/* add a hover effect */
+.hero h1:hover {
+    color: #ff9900;
+    text-shadow: 2px 2px 0px rgba(255,153,0,0.3);
+}
+
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            flex-basis: calc(33.33% - 20px);
+        }
+
+        .feature img {
+            max-width: 100%;
+            height: 500px;
+            margin-bottom: 20px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .feature-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .feature-left img {
+            margin-right: 20px;
+        }
+
+        .feature-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .feature-right img {
+            margin-left: 20px;
+        }
+
+
 		.feature:hover {
 			transform: translateY(-5px);
 			box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
 		}
-		.feature img {
-			max-width: 100%;
-			height: auto;
-			margin-bottom: 20px;
-		}
+        .feature img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+
 		.feature h2 {
 			font-size: 24px;
 			color: #333;
 			margin-bottom: 10px;
 		}
-	.feature p {
-		font-size: 16px;
-		color: #666;
-		line-height: 1.5;
-	}
-	.cta {
-		background-color: #4CAF50;
-		color: #fff;
-		padding: 20px;
-		text-align: center;
-		margin-top: 50px;
-		border-radius: 5px;
-		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-		transition: all 0.3s ease-in-out;
-	}
-	.cta:hover {
-		background-color: #3e8e41;
-		transform: translateY(-5px);
-		box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-	}
-	.cta h2 {
-		font-size: 24px;
-		margin-bottom: 20px;
-		text-transform: uppercase;
-	}
-	.cta p {
-		font-size: 16px;
-		line-height: 1.5;
-		margin-bottom: 20px;
-	}
-</style>
+		.feature p {
+			font-size: 16px;
+			color: #666;
+			line-height: 1.5;
+		}
+
+		.cta {
+			background-color: hsl(270, 40%, 50%);
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			margin-top: 50px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+			transition: all 0.3s ease-in-out;
+		}
+		.cta:hover {
+			background-color: hsl(270, 40%, 60%);
+			transform: translateY(-5px);
+			box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+		}
+		.cta h2 {
+			font-size: 24px;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
+		.cta p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -146,8 +204,8 @@
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="signup.html">Sign In</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -160,19 +218,24 @@
 <section class="features">
 	<div class="container">
 		<div class="feature">
-			<img src="https://images.unsplash.com/photo-1549646638-d4d0327f527c">
-			<h2>Feature One</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec diam vitae velit bibendum consequat a vel lorem.</p>
+			<img src="Images/management.jpg">
+			<h2>Centralized Management</h2>
+			<p>Our Centralized Management tool simplifies the government contracting process for contractors, providing easy access to opportunities, bid and proposal tracking, and contract management in a single location. Save time and resources while improving communication and transparency with government agencies.</p>
 		</div>
 		<div class="feature">
-			<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
-			<h2>Feature Two</h2>
-			<p>Nulla facilisi. Sed in ligula ut risus pharetra faucibus ut et elit. Quisque venenatis eros vitae dui finibus, vel sagittis tellus congue.</p>
+			<img src="Images/Open%20GSA.jpg">
+			<h2>Real Time Responses</h2>
+			<p>Stay ahead of the competition with our Real Time Responses tool, designed to keep you informed about new government contracting opportunities as they become available. Our feature provides instant notifications about new solicitations, RFPs, and contract awards, helping you to respond quickly and effectively to new opportunities.</p>
 		</div>
 		<div class="feature">
-			<img src="https://images.unsplash.com/photo-1520511159106-9e8a8efd32ba">
-			<h2>Feature Three</h2>
-			<p>Mauris commodo vel mi eget faucibus. Donec aliquet ultricies ipsum id bibendum. Sed nec mauris augue.</p>
+			<img src="Images/Crockroachdb.png">
+			<h2>Build To Scale</h2>
+			<p>Our system is Built to Scale, providing contractors with the reliable, real-time data they need to make informed decisions about government contracting opportunities. Our innovative caching technology ensures that our data is always up-to-date, allowing contractors to access the latest information on contracts, solicitations, and awards. </p>
+		</div>
+ 		<div class="feature">
+			<img src="Images/cloudgeneral.jpg">
+			<h2>Ease Of Adaptability</h2>
+			<p>Our tool offers Ease of Adaptability, allowing contractors to seamlessly integrate our platform with their existing systems. Whether utilizing cloud resources or on-premise instances, our tool can be customized to meet the needs of any organization. With our robust APIs, contractors can easily extract data and reports from our platform and integrate them into their own systems. </p>
 		</div>
 	</div>
 </section>
@@ -180,8 +243,8 @@
 <section class="cta">
 	<div class="container">
 		<h2>Ready to get started?</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget nisl eu odio suscipit commodo. Donec suscipit dictum sem.</p>
-		<a href="#" class="button">Get in touch</a>
+		<p>Sign up for a free account and access records of previous successful contract award winners in all areas</p>
+		<a href="/templates/signup.html" class="button">Start Tracking Contracts</a>
 	</div>
 </section>
 </body>
