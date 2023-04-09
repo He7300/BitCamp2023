@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forgot Password</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		form {
+			width: 300px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		}
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 3px;
+			background-color: #f2f2f2;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		.error {
+			color: #ff0000;
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Forgot Password</h1>
+	<form id="reset-form" onsubmit="return validateForm()">
+		<label for="email">Email</label>
+		<input type="text" id="email" name="email">
+
+		<label for="security-question">Security Question (optional)</label>
+		<input type="text" id="security-question" name="security-question">
+
+		<label for="security-answer">Answer (optional)</label>
+		<input type="text" id="security-answer" name="security-answer">
+
+		<input type="submit" value="Reset Password">
+
+		<div class="error-message" id="error-message"></div>
+	</form>
+
+	<script>
+		function validateForm() {
+			var email = document.getElementById("email").value;
+
+			if (email == "") {
+				document.getElementById("error-message").innerHTML = "Please enter your email address.";
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+</body>
+</html>

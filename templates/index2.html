@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing Page</title>
+	<style>
+		body {
+			background: linear-gradient(to bottom, #252525, #1a1a1a);
+			font-family: Arial, sans-serif;
+			margin: 0;
+			color: #fff;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			box-sizing: border-box;
+		}
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: transparent;
+			padding: 20px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+		}
+		.logo {
+			font-size: 32px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #fff;
+			text-decoration: none;
+		}
+		.navigation {
+			display: flex;
+			align-items: center;
+		}
+		.navigation li {
+			margin-left: 20px;
+			list-style: none;
+		}
+		.navigation a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+			transition: all 0.3s ease-in-out;
+			border-bottom: 3px solid transparent;
+			padding-bottom: 10px;
+		}
+		.navigation a:hover {
+			border-bottom: 3px solid #fff;
+		}
+		.hero {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 500px;
+			background-image: url('https://images.unsplash.com/photo-1541549126-5e6dd5d6c013');
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			margin-top: 100px;
+		}
+		.hero:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+		}
+		.hero h1 {
+			color: #fff;
+			font-size: 48px;
+			text-align: center;
+			text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+			margin-bottom: 0;
+			text-transform: uppercase;
+		}
+		.features {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 50px 0;
+		}
+		.feature {
+			background-color: #fff;
+			padding: 20px;
+			margin: 20px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+			border-radius: 5px;
+			width: 300px;
+			text-align: center;
+			transition: all 0.3s ease-in-out;
+		}
+		.feature:hover {
+			transform: translateY(-5px);
+			box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+.feature img {
+max-width: 100%;
+height: auto;
+margin-bottom: 20px;
+}
+.feature h2 {
+font-size: 24px;
+color: #333;
+margin-bottom: 10px;
+}
+.feature p {
+font-size: 16px;
+color: #666;
+line-height: 1.5;
+}
+.cta {
+background-color: #4CAF50;
+color: #fff;
+padding: 20px;
+text-align: center;
+margin-top: 50px;
+border-radius: 5px;
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+transition: all 0.3s ease-in-out;
+}
+.cta:hover {
+background-color: #3e8e41;
+transform: translateY(-5px);
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+.cta h2 {
+font-size: 24px;
+margin-bottom: 20px;
+text-transform: uppercase;
+}
+.cta p {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+form {
+background-color: #fff;
+padding: 30px;
+margin: 50px auto;
+width: 400px;
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+form label {
+font-size: 16px;
+margin-bottom: 10px;
+text-align: left;
+width: 100%;
+display: block;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: none;
+border-radius: 3px;
+background-color: #f2f2f2;
+box-sizing: border-box;
+font-size: 16px;
+}
+form input[type="submit"] {
+background-color: #4CAF50;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 3px;
+cursor: pointer;
+font-size: 16px;
+}
+form input[type="submit"]:hover {
+background-color: #3e8e41;
+}
+form .alt-action {
+margin-top: 20px;
+font-size: 14px;
+}
+form .alt-action a {
+color: #4CAF50;
+text-decoration: none;
+font-weight: bold;
+}
+form .alt-action a:hover {
+text-decoration: underline;
+}
+form .error {
+color: #ff0000;
+font-size: 14px;
+margin-bottom: 10px;
+}
+form .success {
+color: #4CAF50;
+font-size: 14px;
+margin-bottom: 10px;
+}
+form.already-registered {
+margin-top: 20px;
+font-size: 14px;
+}
+form.already-registered a {
+color: #4CAF50;
+text-decoration: none;
+font-weight: bold;
+}
+form.already-registered a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">My Company</a>
+		<nav class="navigation">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+<section class="hero">
+	<div class="container">
+		<h1>Welcome to My Company</h1>
+		<div class="forms">
+			<form id="login-form">
+				<h2>Login</h2>
+				<div class="error" id="login-error"></div>
+				<div class="success" id="login-success"></div>
+				<label for="login-email">Email</label>
+				<input type="email" id="login-email" name="login-email" required>
+				<label for="login-password">Password</label>
+				<input type="password" id="login-password" name="login-password" required>
+				<input type="submit" value="Login">
+				<div class="alt-action">
+					<a href="#" id="forgot-password-link">Forgot Password?</a>
+				</div>
+			</form>
+			<form id="register-form" style="display: none;">
+				<h2>Register</h2>
+				<div class="error" id="register-error"></div>
+				<div class="success" id="register-success"></div>
+				<label for="register-name">Name</label>
+				<input type="text" id="register-name" name="register-name" required>
+				<label for="register-email">Email</label>
+				<input type="email" id="register-email" name="register-email" required>
+				<label for="register-password">Password</label>
+				<input type="password" id="register-password" name="register-password" required>
+				<input type="submit" value="Register">
+				<div class="already-registered">
+					Already registered? <a href="#" id="login-link">Login here</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<section class="features">
+	<div class="container">
+		<div class="feature">
+			<img src="https://images.unsplash.com/photo-1549646638-d4d0327f527c">
+			<h2>Feature One</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec diam vitae velit bibendum consequat a vel lorem.</p>
+		</div>
+		<div class="feature">
+			<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+			<h2>Feature Two</h2>
+			<p>Nulla facilisi. Sed in ligula ut risus pharetra faucibus ut et elit. Quisque venenatis eros vitae dui finibus, vel sagittis tellus congue.</p>
+		</div>
+		<div class="feature">
+			<img src="https://images.unsplash.com/photo-1520511159106-9e8a8efd32ba">
+<h2>Feature Three</h2>
+<p>Mauris commodo vel mi eget faucibus. Donec aliquet ultricies ipsum id bibendum. Sed nec mauris augue.</p>
+</div>
+</div>
+</section>
+<section class="cta">
+	<div class="container">
+		<h2>Ready to get started?</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget nisl eu odio suscipit commodo. Donec suscipit dictum sem.</p>
+		<a href="#" class="button">Get in touch</a>
+	</div>
+</section>
+
+<script>
+	const loginForm = document.getElementById('login-form');
+	const loginEmail = document.getElementById('login-email');
+	const loginPassword = document.getElementById('login-password');
+	const loginError = document.getElementById('login-error');
+	const loginSuccess = document.getElementById('login-success');
+	const registerForm = document.getElementById('register-form');
+	const registerName = document.getElementById('register-name');
+	const registerEmail = document.getElementById('register-email');
+	const registerPassword = document.getElementById('register-password');
+	const registerError = document.getElementById('register-error');
+	const registerSuccess = document.getElementById('register-success');
+	const loginLink = document.getElementById('login-link');
+	const forgotPasswordLink = document.getElementById('forgot-password-link');
+
+	loginForm.addEventListener('submit', (e) => {
+		e.preventDefault();
+		loginError.innerHTML = '';
+		loginSuccess.innerHTML = '';
+
+		// Perform login
+		const email = loginEmail.value;
+		const password = loginPassword.value;
+
+		// Handle login error
+		loginError.innerHTML = 'Incorrect email or password.';
+
+		// Handle login success
+		loginSuccess.innerHTML = 'You have successfully logged in!';
+	});
+
+	registerForm.addEventListener('submit', (e) => {
+		e.preventDefault();
+		registerError.innerHTML = '';
+		registerSuccess.innerHTML = '';
+
+		// Perform registration
+		const name = registerName.value;
+		const email = registerEmail.value;
+		const password = registerPassword.value;
+
+		// Handle registration error
+		registerError.innerHTML = 'An error occurred while registering.';
+
+		// Handle registration success
+		registerSuccess.innerHTML = 'You have successfully registered!';
+	});
+
+	loginLink.addEventListener('click', (e) => {
+		e.preventDefault();
+		loginForm.style.display = 'block';
+		registerForm.style.display = 'none';
+	});
+
+	forgotPasswordLink.addEventListener('click', (e) => {
+		e.preventDefault();
+		// Implement forgot password functionality
+	});
+</script>
+</body>
+</html>

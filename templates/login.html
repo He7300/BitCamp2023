@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		form {
+			width: 300px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		}
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 3px;
+			background-color: #f2f2f2;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		.forgot-password {
+			text-align: center;
+			margin-top: 20px;
+		}
+		.forgot-password a {
+			color: #4CAF50;
+			text-decoration: none;
+		}
+		.forgot-password a:hover {
+			text-decoration: underline;
+		}
+		.error {
+			color: #ff0000;
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Login</h1>
+	<form id="login-form" onsubmit="return validateForm()">
+		<label for="username">Username or Email</label>
+		<input type="text" id="username" name="username">
+
+		<label for="password">Password</label>
+		<input type="password" id="password" name="password">
+
+		<input type="submit" value="Login">
+
+		<div class="forgot-password">
+			<a href="/forgotpass/">Forgot Password?</a>
+		</div>
+
+		<div class="error-message" id="error-message"></div>
+	</form>
+
+	<script>
+		function validateForm() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			if (username == "" || password == "") {
+				document.getElementById("error-message").innerHTML = "Please fill in all fields.";
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+</body>
+</html>

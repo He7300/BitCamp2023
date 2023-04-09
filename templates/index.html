@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing Page</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			margin: 0;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: #fff;
+			padding: 20px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+		}
+		.logo {
+			font-size: 32px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #333;
+			text-decoration: none;
+		}
+		.navigation {
+			display: flex;
+			align-items: center;
+		}
+		.navigation li {
+			margin-left: 20px;
+			list-style: none;
+		}
+		.navigation a {
+			color: #333;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.hero {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 500px;
+			background-image: url('https://images.unsplash.com/photo-1541549126-5e6dd5d6c013');
+			background-size: cover;
+			background-position: center;
+			position: relative;
+		}
+		.hero:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+		}
+		.hero h1 {
+			color: #fff;
+			font-size: 48px;
+			text-align: center;
+			text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+			margin-bottom: 0;
+			text-transform: uppercase;
+		}
+		.features {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 50px 0;
+		}
+		.feature {
+			background-color: #fff;
+			padding: 20px;
+			margin: 20px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+			border-radius: 5px;
+			width: 300px;
+			text-align: center;
+			transition: all 0.3s ease-in-out;
+		}
+		.feature:hover {
+			transform: translateY(-5px);
+			box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+		}
+		.feature img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
+		.feature h2 {
+			font-size: 24px;
+			color: #333;
+			margin-bottom: 10px;
+		}
+	.feature p {
+		font-size: 16px;
+		color: #666;
+		line-height: 1.5;
+	}
+	.cta {
+		background-color: #4CAF50;
+		color: #fff;
+		padding: 20px;
+		text-align: center;
+		margin-top: 50px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		transition: all 0.3s ease-in-out;
+	}
+	.cta:hover {
+		background-color: #3e8e41;
+		transform: translateY(-5px);
+		box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+	}
+	.cta h2 {
+		font-size: 24px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+	.cta p {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">My Company</a>
+		<nav class="navigation">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+<section class="hero">
+	<div class="container">
+		<h1>Welcome to My Company</h1>
+	</div>
+</section>
+
+<section class="features">
+	<div class="container">
+		<div class="feature">
+			<img src="https://images.unsplash.com/photo-1549646638-d4d0327f527c">
+			<h2>Feature One</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec diam vitae velit bibendum consequat a vel lorem.</p>
+		</div>
+		<div class="feature">
+			<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+			<h2>Feature Two</h2>
+			<p>Nulla facilisi. Sed in ligula ut risus pharetra faucibus ut et elit. Quisque venenatis eros vitae dui finibus, vel sagittis tellus congue.</p>
+		</div>
+		<div class="feature">
+			<img src="https://images.unsplash.com/photo-1520511159106-9e8a8efd32ba">
+			<h2>Feature Three</h2>
+			<p>Mauris commodo vel mi eget faucibus. Donec aliquet ultricies ipsum id bibendum. Sed nec mauris augue.</p>
+		</div>
+	</div>
+</section>
+
+<section class="cta">
+	<div class="container">
+		<h2>Ready to get started?</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget nisl eu odio suscipit commodo. Donec suscipit dictum sem.</p>
+		<a href="#" class="button">Get in touch</a>
+	</div>
+</section>
+</body>
+</html>
